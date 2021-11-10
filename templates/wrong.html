@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Index page
+{% endblock %}
+
+
+{% block color %}{{ bg }}{% endblock %}
+
+{% block projects %}
+ 
+    <a class="dropdown-item" href='#'>123</a> 
+	<a class="dropdown-item" href='#'>345</a>
+
+{% endblock %}
+
+
+{% block content_title %}
+Test result:
+{% endblock %}
+
+{% block content %}
+<p>
+{{ message }}
+
+<br>
+{{ surname }} {{ name }}
+</p>
+
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Surname</td>
+            <td>UUID</td>
+            <td>Photo</td>
+			<td>Valid</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["surname"]}}</td>
+               <td>{{ row["uuid"]}}</td>
+               <td>{{row['photo']}}</td>	
+			   <td>{{row['valid']}}</td> 
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>

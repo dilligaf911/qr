@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Index page
+{% endblock %}
+
+{% block projects %}
+{% for i in range(0, len) %} 
+  
+    <a class="dropdown-item" href='/projects/{{ proj[i]["metadata"]["name"] }}'>{{ proj[i]["metadata"]["name"] }}</a> 
+
+{% endfor %} 
+
+{% endblock %}
+
+
+{% block content_title %}
+ 
+{% endblock %}
+
+{% block projects_button %}
+{{ head_title }}
+{% endblock %}
+
+{% block content %}
+<h3>Project 
+	{{ head_title }}
+Content:</h3>
+<p><b>Service accounts:</b></p>
+<ol>
+{% for i2 in range(0, len2) %} 
+<li>{{ sa_list[i2]["metadata"]["name"] }}</li>
+{% endfor %} 
+</ol>
+
+<p><b>User list:</b></p>
+<ol>
+{% for i3 in range(0, len3) %} 
+<li>Subject: {{ rb_list[i3]["subjects"][0]["kind"] }} / {{ rb_list[i3]["subjects"][0]["name"] }}; Role: {{ rb_list[i3]["metadata"]["name"] }},</li>
+{% endfor %} 
+</ol>
+
+
+
+{% endblock %}

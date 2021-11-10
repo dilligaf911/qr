@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Index page
+{% endblock %}
+
+
+{% block color %}{{ bg }}{% endblock %}
+
+{% block projects %}
+ 
+    <a class="dropdown-item" href='#'>123</a> 
+	<a class="dropdown-item" href='#'>345</a>
+
+{% endblock %}
+
+
+{% block content_title %}
+Test result:
+{% endblock %}
+
+{% block content %}
+<p>
+<b>{{ message }}</b>
+<br>
+{{ surname }} {{ name }}
+<br>
+<img src="{{ url_for('static', filename='photo/') }}{{photo}}" width="200">
+</p>
+
+
+
+{% endblock %}
